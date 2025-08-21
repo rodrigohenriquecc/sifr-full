@@ -1,0 +1,12 @@
+{
+  "name": "sifr-full",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w apps/web & npm run dev -w apps/api",
+    "build": "npm run build -w apps/web && npm run build -w apps/api",
+    "deploy:web": "cd apps/web && npm run deploy"
+  }
+}
